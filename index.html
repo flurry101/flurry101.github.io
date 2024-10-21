@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Portfolio</div>
+        <div class="social-icons">
+            <a href="https://github.com/flurry101" target="_blank"><img src="images\socials\github-logo.png"
+                    alt="GitHub"></a>
+            <a href="tel:+1234567890"><img src="images\socials\phone-logo.png" alt="Phone"></a>
+            <a href="mailto:m3l0dy.144@gmail.com"><img src="images\socials\email.png" alt="Email"></a>
+        </div>
+        <nav>
+            <button class="toggle-button" id="mobile-nav-toggle">&#9776;</button>
+            <ul class="nav-list" id="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Hello, I'm <span class="highlight">Melody!</span></h1>
+        <div class="typing-animation">
+            <span id="typed-text"></span>
+        </div>
+        <br>
+        <div class="carousel">
+            <img src="images\carousel\image-1.gif" alt="Image 1" class="carousel-image active">
+            <img src="images\carousel\image-2.gif" alt="Image 2" class="carousel-image">
+            <img src="images\carousel\image-3.gif" alt="Image 3" class="carousel-image">
+            <button class="carousel-button prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="carousel-button next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-info">
+            <img src="images\profile\p.gif" alt="Your Image" class="about-image">
+            <div class="personal-details">
+                <p><b>Aspiring Software Engineer | Student</b></p>
+                <p><b>Degree:</b> Bachelor of Engineering</p>
+                <p><b>Specialization:</b> Computer Science And Engineering</p>
+                <p><b>City:</b> Bangalore, India</p>
+                <p>I find this Latin philosophical saying <i>“sapere aude”</i>, that translates to “Dare to know”
+                    increasingly relevant in today's
+                    context, where information is readily accessible at our fingertips. I aspire to be motivated to
+                    challenge
+                    assumptions and pursue understanding of technology, fueled by a keen interest in Computer Science
+                    and
+                    Engineering. Each project I undertake represents not merely a task but an opportunity for innovation
+                    and
+                    personal growth. I take pleasure in connecting with like-minded individuals, participating in
+                    hackathons, and
+                    collaborating on exciting projects. I strive to remain informed about emerging technology trends,
+                    refine my
+                    problem-solving abilities through online platforms, and am actively exploring the open-source
+                    community.
+                    Through perseverance and a commitment to lifelong learning, I aspire to make a positive impact in
+                    the digital
+                    landscape</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills-icons">
+            <img src="images\skills\python.png" alt="Python">
+            <img src="images\skills\mysql.png" alt="MySQL">
+            <img src="images\skills\html.png" alt="HTML">
+            <img src="images\skills\c.png" alt="C">
+            <img src="images\socials\github-logo.png" alt="GitHub">
+            <img src="images\skills\vs-code.png" alt="VS Code">
+            <img src="images\skills\LaTeX.png" alt="LaTeX">
+            <img src="images\skills\java.png" alt="Java">
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-images">
+            <a href="https://github.com/flurry101/A_Library_Management_System"><img src="images\projects\1.gif"
+                    alt="Project 1"></a>
+            <a href="#projects"><img src="images\projects\2.gif" alt="Project 2" height="100"></a>
+            <a href="#projects"><img src="images\projects\3.gif" alt="Project 3" height="100"></a>
+            <a href="#projects"><img src="images\projects\4.gif" alt="Project 4" height="100"></a>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <a href="path/to/resume.pdf" target="_blank"><input type="button" value="View Resume" /></a>
+    </section>
+
+    <section id="contact">
+        <h2><i>Stay</i> in Touch</h2>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© melody. All Rights Reserved. Flaticon By <a href="https://www.freepik.com/">freepik</a> </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

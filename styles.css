@@ -1,0 +1,464 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0a0a0a;
+    /* Dark background */
+    color: #f0f0f0;
+    /* Light text color for contrast */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #1c1c1c, #00aaff);
+    /* Gradient background */
+    color: #f0f0f0;
+    /* Light text color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    /* Shadow for depth */
+}
+
+.logo {
+    font-size: 2em;
+    /* Slightly larger for emphasis */
+    font-weight: bold;
+    letter-spacing: 1px;
+    /* Spacing for a techy feel */
+}
+
+.social-icons img {
+    width: 30px;
+    /* Adjust size as needed */
+    filter: brightness(0) invert(1);
+    /* White icons for better visibility */
+    transition: transform 0.3s;
+    /* Smooth transition */
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+    /* Slight zoom effect on hover */
+}
+
+nav {
+    position: relative;
+}
+
+.toggle-button {
+    display: none;
+    /* Hidden by default */
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #072a3b;
+    /* Blue for button */
+    cursor: pointer;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-list li {
+    padding: 5px 10px;
+    transition: background 0.3s;
+}
+
+.nav-list li a {
+    color: #f0f0f0;
+    /* Light text color */
+    text-decoration: none;
+    padding: 10px 15px;
+    /* Added padding for better click area */
+    border-radius: 4px;
+    /* Rounded corners */
+    position: relative;
+    /* Position for pseudo-element */
+}
+
+.nav-list li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #01699d;
+    /* Accent color */
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.nav-list li a:hover::after {
+    transform: scaleX(1);
+    /* Slide effect on hover */
+}
+
+section {
+    padding: 40px;
+    background-color: #1c1c1c;
+    /* Dark gray for sections */
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    /* Shadow for depth */
+}
+
+.typing-animation {
+    font-size: 1.5em;
+    /* Adjust text size */
+    margin: 10px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #00aaff;
+    /* Blue cursor */
+    animation: blink 0.7s step-end infinite;
+    max-width: 100%;
+    /* Ensure it doesn't overflow */
+    display: inline-block;
+    /* Allow to shrink and fit content */
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    /* Increased height for better visuals */
+    overflow: hidden;
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out;
+    /* Smooth transition */
+}
+
+.carousel-image.active {
+    display: block;
+    opacity: 1;
+    /* Fade in effect */
+}
+
+.carousel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Cover the entire area */
+    border-radius: 8px;
+    /* Rounded corners */
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    /* Positioning for caption */
+    left: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    /* Semi-transparent background */
+    color: #fff;
+    /* White text */
+    padding: 10px 15px;
+    /* Padding for text */
+    border-radius: 4px;
+    /* Rounded corners */
+    font-size: 1.2em;
+    /* Caption font size */
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 170, 255, 0.8);
+    border: none;
+    padding: 15px;
+    font-size: 24px;
+    color: white;
+    border-radius: 50%;
+    /* Circular buttons */
+    transition: background 0.3s, box-shadow 0.3s;
+    /* Add shadow transition */
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 170, 255, 1);
+    /* Full blue on hover */
+    box-shadow: 0 4px 15px rgba(0, 170, 255, 0.5);
+    /* Glowing effect */
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+
+
+.about-info {
+    display: flex;
+    flex-direction: column;
+    /* Stacks on smaller screens */
+    align-items: center;
+}
+
+.about-image {
+    width: 150px;
+    /* Adjust size */
+    height: auto;
+    border-radius: 50%;
+    /* Make it circular */
+    border: 2px solid #00aaff;
+    /* Blue border for image */
+}
+
+.skills-icons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skills-icons img {
+    width: 50px;
+    /* Adjust size */
+    transition: transform 0.3s, filter 0.3s;
+    /* Smooth transition */
+}
+
+.skills-icons img:hover {
+    transform: scale(1.1);
+    /* Slight zoom effect */
+    filter: brightness(0.8);
+    /* Dim slightly on hover */
+}
+
+.project-images {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.project-images img {
+    width: 100px;
+    /* Adjust size */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    /* Subtle shadow */
+    transition: transform 0.3s;
+    /* Smooth transition */
+}
+
+.project-images img:hover {
+    transform: scale(1.05);
+    /* Slight zoom effect */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    /* Darker background for footer */
+    color: #00aaff;
+    /* Blue text for footer */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+    /* Shadow for depth */
+}
+
+/* Contact Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Space between form elements */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #00aaff;
+    /* Blue for labels */
+}
+
+input,
+textarea {
+    padding: 10px;
+    border: 1px solid #00aaff;
+    /* Blue border */
+    border-radius: 4px;
+    background-color: #2a2a2a;
+    /* Darker background for inputs */
+    color: #f0f0f0;
+    /* Light text color */
+    font-size: 16px;
+    /* Improved readability */
+    transition: border 0.3s;
+    /* Smooth transition */
+}
+
+input:focus,
+textarea:focus {
+    border-color: #00ccff;
+    /* Change border color on focus */
+    outline: none;
+    /* Remove outline */
+}
+
+textarea {
+    resize: vertical;
+    /* Allow vertical resizing */
+}
+
+/* Send Button Styles */
+button[type="submit"] {
+    background-color: #00aaff;
+    /* Bright blue background */
+    color: white;
+    /* White text */
+    padding: 12px 24px;
+    /* Increased padding for better size */
+    border: none;
+    /* No border */
+    border-radius: 5px;
+    /* Rounded corners */
+    font-size: 16px;
+    /* Larger text */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    /* Smooth transitions */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow for depth */
+}
+
+button[type="submit"]:hover {
+    background-color: #0088cc;
+    /* Darker blue on hover */
+    transform: translateY(-2px);
+    /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0, 136, 204, 0.5);
+    /* Glowing effect on hover */
+}
+
+button[type="submit"]:active {
+    background-color: #0077bb;
+    /* Even darker blue when active */
+    transform: translateY(0);
+    /* Reset lift effect */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .toggle-button {
+        display: block;
+        /* Show toggle button on small screens */
+    }
+
+    .nav-list {
+        display: none;
+        /* Hide by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        /* Below header */
+        left: 0;
+        background-color: #1c1c1c;
+        width: 100%;
+        padding: 10px 0;
+        z-index: 1000;
+        /* Ensure it's above other content */
+    }
+
+    .nav-list.show {
+        display: flex;
+        /* Show when toggled */
+    }
+
+    .nav-list li {
+        padding: 10px;
+        /* Increased padding for easier tapping */
+    }
+
+    .about-info {
+        align-items: center;
+        /* Centered on smaller screens */
+    }
+
+    .hero {
+        height: auto;
+        /* Adjust height for smaller screens */
+        min-height: 60vh;
+        /* Minimum height for visibility */
+        padding: 20px;
+        /* Maintain padding */
+    }
+
+    .hero-content {
+        max-width: 90%;
+        /* Allow more space on mobile */
+        padding: 20px;
+        /* Maintain padding */
+        backdrop-filter: blur(10px);
+    }
+
+    .highlight {
+        color: #00aaff;
+        /* Highlight color for emphasis */
+    }
+
+    .typing-animation {
+        font-size: 1.25em;
+        /* Slightly smaller on mobile */
+        margin: 0;
+        /* Adjust margin for better fit */
+    }
+}
+
+/* Additional Responsive Adjustments for Smaller Devices */
+@media (max-width: 480px) {
+    .nav-list li {
+        padding: 15px;
+        /* Increased padding for easier tapping */
+    }
+
+    .about-image {
+        width: 120px;
+        /* Smaller image on very small screens */
+    }
+
+    .skills-icons img {
+        width: 40px;
+        /* Smaller icons for better fit */
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        /* Full width on mobile */
+    }
+}
